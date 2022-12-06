@@ -22,7 +22,7 @@ export default function AccountPopOver() {
     return (
         <>
             <Button onClick={handleOpenPopOver}>
-                {/* <Avatar src={Profile} alt="Rabiul Islam" variant="rounded" /> */}
+                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" />
             </Button>
             <Menu
                 sx={{ mt: "52px" }}
