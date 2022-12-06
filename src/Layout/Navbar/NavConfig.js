@@ -4,10 +4,6 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import HourglassEmptyOutlinedIcon from "@mui/icons-material/HourglassEmptyOutlined";
 import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
 import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
-// import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-// import PendingOutlinedIcon from '@mui/icons-material/PendingOutlined';
-// import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-
 const navConfig = [
   {
     id: 1,
