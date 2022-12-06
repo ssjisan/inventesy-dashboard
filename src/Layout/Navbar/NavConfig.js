@@ -1,47 +1,48 @@
-import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
-import MyLocationOutlinedIcon from "@mui/icons-material/MyLocationOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import HourglassEmptyOutlinedIcon from "@mui/icons-material/HourglassEmptyOutlined";
-import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
-import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
+import Items from "../../Assets/Icons/Items";
+import Zone from "../../Assets/Icons/Zone";
+import Salesman from "../../Assets/Icons/Salesman";
+import DailySales from "../../Assets/Icons/DailySales";
+import Reports from "../../Assets/Icons/Reports";
+import Dashboard from "../../Assets/Icons/Dashboard";
 
 const navConfig = [
   {
     id: 1,
     title: "Dashboard",
     link: "/",
-    icon: <AutoAwesomeMosaicOutlinedIcon />,
+    icon: <Dashboard />,
   },
   {
     id: 2,
     title: "Product",
     link: "/product",
-    icon: <Inventory2OutlinedIcon />,
+    icon: <Items />,
   },
   {
     id: 3,
     title: "Zone",
     link: "/zone",
-    icon: <MyLocationOutlinedIcon />,
+    icon: <Zone />,
   },
   {
     id: 4,
     title: "Salesman",
     link: "/salesman",
-    icon: <PersonOutlineOutlinedIcon />,
+    icon: <Salesman />,
   },
   {
     id: 5,
     title: "Daily Sales",
     link: "/daily-sales",
-    icon: <HourglassEmptyOutlinedIcon />,
+    icon: <DailySales />,
   },
   {
     id: 6,
     title: "Report",
     link: "/report",
-    icon: <ContentPasteOutlinedIcon />,
+    icon: <Reports />,
   },
 ];
 const settings = [{ id: 1, title: "Name" }];
+
 export { navConfig, settings };
