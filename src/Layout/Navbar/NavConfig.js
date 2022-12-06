@@ -4,6 +4,7 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import HourglassEmptyOutlinedIcon from "@mui/icons-material/HourglassEmptyOutlined";
 import ContentPasteOutlinedIcon from "@mui/icons-material/ContentPasteOutlined";
 import AutoAwesomeMosaicOutlinedIcon from "@mui/icons-material/AutoAwesomeMosaicOutlined";
+
 const navConfig = [
   {
     id: 1,
@@ -31,8 +32,8 @@ const navConfig = [
   },
   {
     id: 5,
-    title: "Daily load",
-    link: "/daily-load",
+    title: "Daily Sales",
+    link: "/daily-sales",
     icon: <HourglassEmptyOutlinedIcon />,
   },
   {
@@ -43,4 +44,4 @@ const navConfig = [
   },
 ];
 const settings = [{ id: 1, title: "Name" }];
-export {navConfig,settings};
+export { navConfig, settings };
