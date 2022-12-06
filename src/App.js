@@ -1,13 +1,14 @@
-import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import MainRoute from "./Components/MainRoute";
-
+import Theme from "./Components/Theme/Theme";
 
 function App() {
   return (
-    <BrowserRouter>
-        <MainRoute/>
-    </BrowserRouter>
+    <Theme>
+      <BrowserRouter>
+        <MainRoute />
+      </BrowserRouter>
+    </Theme>
   );
 }
 

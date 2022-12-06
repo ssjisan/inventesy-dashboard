@@ -25,8 +25,8 @@ export default function Navbar({ handleDrawerToggle }) {
             }}
             style={{
                 backgroundColor: "rgba(255, 255, 255, 0.04)",
-                backdropFilter: "blur(8px)",
                 boxShadow: "none",
+                borderBottom:"1px dashed #E0E0E0"
             }}
         >
             <Toolbar>

@@ -20,9 +20,9 @@ export default function AccountPopOver() {
     };
 
     return (
-        <>
+        <Box>
             <Button onClick={handleOpenPopOver}>
-                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" />
+                <Avatar src="avatar.png" alt="Rabiul Islam" variant="rounded" sx={{width:"40px", height:"40px"}}/>
             </Button>
             <Menu
                 sx={{ mt: "52px" }}
@@ -113,6 +113,6 @@ export default function AccountPopOver() {
                     </Typography>
                 </MenuItem>
             </Menu>
-        </>
+        </Box>
     );
 }

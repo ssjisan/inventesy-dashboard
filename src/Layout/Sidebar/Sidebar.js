@@ -8,7 +8,7 @@ import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Navbar from "../Navbar/Navbar";
 import { navConfig } from "../Navbar/NavConfig";
-import { Avatar, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 const drawerWidth = 280;
 
 function Sidebar(props) {
@@ -28,35 +28,8 @@ function Sidebar(props) {
 
   const drawer = (
     <div>
-      <Box sx={{ px: 2.5, py: 3, display: "inline-flex" }}>
+      <Box sx={{ pl: 2.5, pt: 3, pb: 8, display: "inline-flex" }}>
         <img src="Logo.svg" alt="React Logo" />
-      </Box>
-      <Box sx={{ mb: 5, mx: 2.5 }}>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            padding: "16px",
-            borderRadius: "16px",
-            backgroundColor: "#edeff1",
-          }}
-        >
-          <Box>
-            <Avatar
-              src="avatar.png"
-              alt="photoURL"
-              sx={{ width: 56, height: 56 }}
-            />
-          </Box>
-          <Box sx={{ ml: 2 }}>
-            <Typography variant="subtitle2" sx={{ color: "text.primary" }}>
-              Rabiul Islam Babu
-            </Typography>
-            <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Admin
-            </Typography>
-          </Box>
-        </Box>
       </Box>
       <List>
         {navConfig.map((item) => (

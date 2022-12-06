@@ -17,7 +17,7 @@ export default function Dashboard() {
         }}
       >
         <Toolbar />
-        <Typography variant="h4" sx={{ mb: 5 }}>
+        <Typography variant="h4" sx={{ mb: 5 }} color="text.1000">
           Hi, Welcome back
         </Typography>
       </Box>
