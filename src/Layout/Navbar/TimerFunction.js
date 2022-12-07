@@ -32,7 +32,7 @@ export default function TimerFunction() {
   var month = months[today.getMonth()];
   var year = today.getFullYear();
   return (
-    <Box sx={{width:"240px"}}>
+    <Box sx={{width:"300px"}}>
       <Typography variant="body2" color="text.600" sx={{  mr: 2 }}>
         {date} {month} {year}, {day}
       </Typography>

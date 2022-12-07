@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Total Earning",
+    "amount": "$43,833",
+    "state": 35
+  },
+  {
+    "id": 2,
+    "title": "Return",
+    "amount": "$29,036",
+    "state": 5
+  },
+  {
+    "id": 3,
+    "title": " Purchase",
+    "amount": "$22,530",
+    "state": 24
+  },
+  {
+    "id": 4,
+    "title": "Marketing",
+    "amount": "$12,02",
+    "state": 8
+  }
+]

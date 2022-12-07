@@ -1,5 +1,6 @@
-import { Box,Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import StateCard from "../../Components/Dashboard/StateCard";
 import Sidebar from "../../Layout/Sidebar/Sidebar";
 
 export default function Dashboard() {
@@ -17,9 +18,13 @@ export default function Dashboard() {
         }}
       >
         <Toolbar />
-        <Typography variant="h4" sx={{ mb: 5 }} color="text.1000">
-          Hi, Welcome back
+        <Typography
+          sx={{ mb: 5, fontSize: "24px", fontWeight: 600 }}
+          color="text.1000"
+        >
+          Overview
         </Typography>
+        <StateCard sx={{ mb: 5 }} />
       </Box>
     </Box>
   );
