@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Fresh Butter Cookies-Jar 900gX6PC",
+    "stock": 20,
+    "price": 280,
+    "brand": "Fresh",
+    "category": "Cookies",
+    "image": "https://i.ibb.co/dcZ4Yz7/Fresh-Butter-Cookies-Jar.png"
+  },
+  {
+    "id": 2,
+    "title": "Fresh FunFill Sndwch Crm 30gX48",
+    "stock": 12,
+    "price": 20,
+    "brand": "Fresh",
+    "category": "Cookies",
+    "image": "https://i.ibb.co/4jg4mhk/Fresh-Fun-Fill.png"
+  },
+  {
+    "id": 3,
+    "title": "Fresh Sweet n Salty Biscuit 48x15g",
+    "stock": 2,
+    "price": 190,
+    "brand": "Fresh",
+    "category": "Cookies",
+    "image": "https://i.ibb.co/hcDb2y4/Fresh-Sweet-n-Salty-Biscuit-48x15g.png"
+  },
+  {
+    "id": 4,
+    "title": "Fresh Chocolate Chip Cookies 250gX6",
+    "stock": 12,
+    "price": 180,
+    "brand": "Fresh",
+    "category": "Cookies",
+    "image": "https://i.ibb.co/XLH4sKw/Fresh-Chocolate-Chip-Cookies.png"
+  },
+  {
+    "id": 5,
+    "title": "Fresh Coconut Cookies 80gx24",
+    "stock": 23,
+    "price": 210,
+    "brand": "Fresh",
+    "category": "Cookies",
+    "image": "https://i.ibb.co/YLw6ydV/Fresh-Coconut-Cookies.png"
+  }
+]

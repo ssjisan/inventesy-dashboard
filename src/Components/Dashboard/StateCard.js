@@ -1,11 +1,11 @@
 import { Card, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
-import "./Styel.css";
 import stateData from "../../Assets/FakeData/state.json";
 import { Box } from "@mui/system";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 export default function StateCard() {
+    
   // eslint-disable-next-line
   const [state, setState] = useState(stateData);
   return (
