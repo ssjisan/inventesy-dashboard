@@ -5,16 +5,31 @@ import ReactApexChart from "react-apexcharts";
 const state = {
   series: [
     {
-      name: "Sales",
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+      name: "Net Profit",
+      data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+    },
+    {
+      name: "Revenue",
+      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+    },
+    {
+      name: "Free Cash Flow",
+      data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
     },
   ],
   options: {
     chart: {
-      height: 350,
-      type: "line",
+      height: 280,
+      type: "bar",
       zoom: {
         enabled: true,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: false,
+          columnWidth: "55%",
+          endingShape: "rounded",
+        },
       },
       toolbar: {
         show: false,
@@ -24,11 +39,13 @@ const state = {
       enabled: false,
     },
     stroke: {
-      curve: "straight",
+      show: true,
+      width: 2,
+      colors: ["transparent"],
     },
     grid: {
       row: {
-        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+        colors: ["transparent"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
     },
