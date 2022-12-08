@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, TableBody, TableRow } from "@mui/material";
+import { Avatar, Chip, TableBody, TableRow } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 export default function TableContant({ product }) {
@@ -27,7 +27,26 @@ export default function TableContant({ product }) {
           <StyledTableCell align="right">{data.brand}</StyledTableCell>
           <StyledTableCell align="right">{data.category}</StyledTableCell>
           <StyledTableCell align="right">{data.price}</StyledTableCell>
-          <StyledTableCell align="right">Status</StyledTableCell>
+          <StyledTableCell align="center">
+           {data.stock >=10 ? <Chip
+              label="in stock"
+              sx={{
+                fontSize: "14px",
+                fontWeight: 600,
+                backgroundColor: "#DDEDDD",
+                color: "#1B5E20",
+              }}
+            />
+            : <Chip
+              label="out of stock"
+              sx={{
+                fontSize: "14px",
+                fontWeight: 600,
+                backgroundColor: "#FFCDD2",
+                color: "#B71C1C",
+              }}
+            />}
+          </StyledTableCell>
         </TableRow>
       ))}
     </TableBody>

@@ -24,7 +24,7 @@ export default function TableHeader() {
         <StyledTableCell align="right">Brand</StyledTableCell>
         <StyledTableCell align="right">Category</StyledTableCell>
         <StyledTableCell align="right">Price</StyledTableCell>
-        <StyledTableCell align="right">Status</StyledTableCell>
+        <StyledTableCell align="center">Status</StyledTableCell>
       </TableRow>
     </TableHead>
   );
