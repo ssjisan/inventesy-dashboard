@@ -5,7 +5,7 @@ export default function Pagination({ product }) {
   return (
     <TablePagination
       count={product.length}
-      sx={{ borderBottom: "none" }}
+      sx={{ borderBottom: "none"}}
       component="div"
     />
   );

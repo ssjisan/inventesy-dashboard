@@ -20,7 +20,12 @@ export default function Theme({ children }) {
         100: "#F5F5F5",
         50: "#FAFAFA",
       },
-    },
+      primary:{
+        light:"#8097AD",
+        main:"#254E75",
+        dark:"#0D3B66"
+      }
+    }
   });
   return <ThemeProvider theme={theme}> {children} </ThemeProvider>;
 }

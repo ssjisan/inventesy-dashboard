@@ -18,19 +18,19 @@ export default function ProductTable() {
         }}
       >
         <Typography
-          sx={{ fontSize: "18px", fontWeight: 700 }}
+          sx={{ fontSize: "16px", fontWeight: 700 }}
           color="text.1000"
         >
           Top Selling Products
         </Typography>
-        <Button>View All</Button>
+        <Button sx={{padding:"4px 8px", backgroundColor:"text.200", color:"text.900", textTransform:"none"}}>View All</Button>
       </Box>
       <TableContainer sx={{ mt: 3 }}>
         <Table>
           <TableHeader />
           <TableContant product={product} />
         </Table>
-          <Pagination product={product} />
+        <Pagination product={product} />
       </TableContainer>
     </Box>
   );
