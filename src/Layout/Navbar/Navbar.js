@@ -24,7 +24,7 @@ export default function Navbar({ handleDrawerToggle }) {
                 ml: { lg: `${drawerWidth}px` },
             }}
             style={{
-                backgroundColor: "rgba(255, 255, 255, 0.04)",
+                backgroundColor: "rgba(255, 255, 255, 1)",
                 boxShadow: "none",
                 borderBottom:"1px dashed #E0E0E0"
             }}

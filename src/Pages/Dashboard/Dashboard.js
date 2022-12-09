@@ -1,5 +1,10 @@
-import { Box,Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar, Typography, Grid, Card } from "@mui/material";
 import React from "react";
+import ProductTable from "../../Components/Dashboard/Product Table/ProductTable";
+import RecentActivity from "../../Components/Dashboard/RecentActivity";
+import StateCard from "../../Components/Dashboard/StateCard";
+import BarChart from "../../Components/Dashboard/BarChart";
+import PieChart from "../../Components/Dashboard/PieChart";
 import Sidebar from "../../Layout/Sidebar/Sidebar";
 
 export default function Dashboard() {
@@ -17,9 +22,67 @@ export default function Dashboard() {
         }}
       >
         <Toolbar />
-        <Typography variant="h4" sx={{ mb: 5 }} color="text.1000">
-          Hi, Welcome back
+        <Typography
+          sx={{ mb: 5, fontSize: "24px", fontWeight: 600 }}
+          color="text.1000"
+        >
+          Overview
         </Typography>
+        <StateCard sx={{ mb: 5 }} />
+        <Grid container spacing={2} sx={{ mt: 5 }}>
+          <Grid item xs={12} sm={12} md={8}>
+            <Card
+              sx={{
+                p: 2,
+                boxShadow:
+                  "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
+                padding: "20px 30px",
+                borderRadius: "16px",
+              }}
+            >
+              <BarChart />
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={12} md={4}>
+            <Card
+              sx={{
+                p: 2,
+                boxShadow:
+                  "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
+                padding: "20px 30px",
+                borderRadius: "16px",
+              }}
+            >
+              <PieChart />
+            </Card>
+          </Grid>
+        </Grid>
+        <Grid container spacing={2} sx={{ mt: 5 }}>
+          <Grid item xs={12} sm={12} md={9}>
+            <Card
+              sx={{
+                p: 2,
+                boxShadow:
+                  "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
+                borderRadius: "16px",
+              }}
+            >
+              <ProductTable />
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={12} md={3}>
+            <Card
+              sx={{
+                p: 2,
+                boxShadow:
+                  "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
+                borderRadius: "16px",
+              }}
+            >
+              <RecentActivity />
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );

@@ -20,15 +20,15 @@ const navConfig = [
   },
   {
     id: 3,
-    title: "Zone",
-    link: "/zone",
-    icon: <Zone />,
-  },
-  {
-    id: 4,
     title: "Salesman",
     link: "/salesman",
     icon: <Salesman />,
+  },
+  {
+    id: 4,
+    title: "Zone",
+    link: "/zone",
+    icon: <Zone />,
   },
   {
     id: 5,
