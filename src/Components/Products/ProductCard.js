@@ -3,12 +3,13 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 export default function ProductCard({ product }) {
   return (
-    <Grid container spacing={3} sx={{ mt: 2 }}>
+    <Grid container spacing={3}>
       {product.map((data) => (
         <Grid item xs={12} sm={6} md={3} key={data.id}>
           <Card
             sx={{
-              boxShadow: "0px 4px 20px rgba(0, 117, 255, 0.1)",
+              boxShadow:
+                "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
               borderRadius: "10px",
             }}
           >
@@ -30,6 +31,7 @@ export default function ProductCard({ product }) {
                       color: "white",
                       borderRadius: "4px",
                       fontSize: 12,
+                      fontWeight: 600,
                     }}
                   >
                     Stock Available ({data.stock})
@@ -43,6 +45,7 @@ export default function ProductCard({ product }) {
                       color: "white",
                       borderRadius: "4px",
                       fontSize: 12,
+                      fontWeight: 600,
                     }}
                   >
                     Stock Limited ({data.stock})
@@ -56,6 +59,7 @@ export default function ProductCard({ product }) {
                       color: "white",
                       borderRadius: "4px",
                       fontSize: 12,
+                      fontWeight: 600,
                     }}
                   >
                     Stock out
@@ -68,10 +72,10 @@ export default function ProductCard({ product }) {
               alt="green iguana"
               height="160"
               src={data.image}
-              sx={{ objectFit: "contain" }}
+              sx={{ objectFit: "contain", backgroundColor:"#EBEFF2"}}
             />
             <CardContent>
-              <Box sx={{ height: "80px" }}>
+              <Box>
                 <Typography sx={{ fontSize: "14px", fontWeight: 600 }}>
                   {data.title}
                 </Typography>

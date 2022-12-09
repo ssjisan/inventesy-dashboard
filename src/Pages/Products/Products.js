@@ -37,6 +37,9 @@ export default function Products() {
           <Button>Add Product</Button>
         </Box>
         <StateCard/>
+        <Box sx={{padding:"16px"}}>
+          {/* Grid view list view button */}
+        </Box>
         <ProductCard product={product} />
       </Box>
     </Box>
