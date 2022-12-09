@@ -1,6 +1,9 @@
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar, Typography, Button } from "@mui/material";
 import React from "react";
+import StateCard from "../../Components/Products/StateCard";
 import Sidebar from "../../Layout/Sidebar/Sidebar";
+import ProductCard from "../../Components/Products/ProductCard";
+import product from "../../Assets/FakeData/product.json";
 
 export default function Products() {
   const drawerWidth = 280;
@@ -17,9 +20,24 @@ export default function Products() {
         }}
       >
         <Toolbar />
-        <Typography variant="h4" sx={{ mb: 5 }} color="text.1000">
-          Hi, Welcome back
-        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            sx={{fontSize: "24px", fontWeight: 600 }}
+            color="text.1000"
+          >
+            Produts
+          </Typography>
+          <Button>Add Product</Button>
+        </Box>
+        <StateCard/>
+        <ProductCard product={product} />
       </Box>
     </Box>
   );
