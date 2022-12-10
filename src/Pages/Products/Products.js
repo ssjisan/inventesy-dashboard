@@ -38,7 +38,14 @@ export default function Products() {
           >
             Produts
           </Typography>
-          <Button>Add Product</Button>
+          <Button
+            variant="contained"
+            sx={{
+              textTransform: "none",
+            }}
+          >
+            Add Product
+          </Button>
         </Box>
         <StateCard />
         <Box sx={{ padding: "16px" }}>{/* Grid view list view button */}</Box>

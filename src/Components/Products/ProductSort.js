@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Menu,
-  Button,
-  MenuItem,
-  Typography,
-  IconButton,
-  Box,
-} from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Menu, Button, MenuItem, Typography } from "@mui/material";
 const SORT_BY_OPTIONS = [
   { value: "featured", label: "Featured" },
   { value: "newest", label: "Newest" },
@@ -17,7 +9,6 @@ const SORT_BY_OPTIONS = [
 
 export default function ProductSort() {
   const [open, setOpen] = useState(null);
-  const [sort, setSort] = useState("Newest");
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
@@ -27,15 +18,14 @@ export default function ProductSort() {
   };
   return (
     <>
-      <Button color="inherit" disableRipple onClick={handleOpen}>
-        {" "}
+      <Button onClick={handleOpen} sx={{ color: "text.1000", fontWeight: 700 }}>
         Sort By:&nbsp;
         <Typography
           component="span"
           variant="subtitle2"
           sx={{ color: "text.secondary" }}
         >
-          {sort}
+          Featured
         </Typography>
       </Button>
       <Menu
