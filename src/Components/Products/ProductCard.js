@@ -5,7 +5,7 @@ export default function ProductCard({ product }) {
   return (
     <Grid container spacing={3}>
       {product.map((data) => (
-        <Grid item xs={12} sm={6} md={3} key={data.id}>
+        <Grid item xs={12} sm={6} md={2} key={data.id}>
           <Card
             sx={{
               boxShadow:

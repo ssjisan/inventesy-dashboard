@@ -29,18 +29,16 @@ export default function Products() {
           }}
         >
           <Typography
-            sx={{fontSize: "24px", fontWeight: 600 }}
+            sx={{ fontSize: "24px", fontWeight: 600 }}
             color="text.1000"
           >
             Produts
           </Typography>
           <Button>Add Product</Button>
         </Box>
-        <StateCard/>
-        <Box sx={{padding:"16px"}}>
-          {/* Grid view list view button */}
-        </Box>
-        <ProductCard product={product} />
+        <StateCard />
+        <Box sx={{ padding: "16px" }}>{/* Grid view list view button */}</Box>
+          <ProductCard product={product} />
       </Box>
     </Box>
   );
