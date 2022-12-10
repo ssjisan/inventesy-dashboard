@@ -3,7 +3,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 export default function ProductCard({ product }) {
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} sx={{ mt: 3 }}>
       {product.map((data) => (
         <Grid item xs={12} sm={6} md={2} key={data.id}>
           <Card

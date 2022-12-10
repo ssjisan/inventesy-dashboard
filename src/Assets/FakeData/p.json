@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "",
+  "sku": 1,
+  "type": "box",
+  "brand": "",
+  "category": "",
+  "sellingPrice": "",
+  "img": [
+    { "id": 1, "url": "" },
+    { "id": 2, "url": "" }
+  ],
+  "reorderPoint": 2
+}
