@@ -25,9 +25,10 @@ export default function Header() {
         <StyledTableCell align="right">SKU</StyledTableCell>
         <StyledTableCell align="right">Brand</StyledTableCell>
         <StyledTableCell align="right">Category</StyledTableCell>
-        <StyledTableCell align="center">Price</StyledTableCell>
-        <StyledTableCell align="center">Reorder Point</StyledTableCell>
+        <StyledTableCell align="right">Price</StyledTableCell>
+        <StyledTableCell align="right">Reorder Point</StyledTableCell>
         <StyledTableCell align="center">Status</StyledTableCell>
+        <StyledTableCell align="center"></StyledTableCell>
       </TableRow>
     </TableHead>
   );

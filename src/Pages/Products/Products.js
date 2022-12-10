@@ -53,7 +53,7 @@ export default function Products() {
             sx={{ fontSize: "16px", fontWeight: 700 }}
             color="text.1000"
           >
-            Top Selling Products
+            All Products
           </Typography>
 
           <ButtonGroup

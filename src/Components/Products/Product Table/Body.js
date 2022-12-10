@@ -1,12 +1,14 @@
 import React from "react";
-import { Avatar, Chip, TableBody, TableRow } from "@mui/material";
+import { Avatar, Chip, IconButton, TableBody, TableRow } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 export default function Body({ product }) {
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.body}`]: {
       color: "#212121",
       fontWeight: "500",
+      border:"none"
     },
   }));
   return (
@@ -24,9 +26,11 @@ export default function Body({ product }) {
             {" "}
             <Avatar alt={data.title} src={data.image} /> {data.title}
           </StyledTableCell>
-          <StyledTableCell align="right">{data.brand}</StyledTableCell>
-          <StyledTableCell align="right">{data.category}</StyledTableCell>
+          <StyledTableCell align="right">"SKU"</StyledTableCell>
+          <StyledTableCell align="right">"Brand"</StyledTableCell>
+          <StyledTableCell align="right">"Category"</StyledTableCell>
           <StyledTableCell align="right">{data.price}</StyledTableCell>
+          <StyledTableCell align="right">"Reorder Point"</StyledTableCell>
           <StyledTableCell align="center">
             {data.stock >= 10 ? (
               <Chip
@@ -49,6 +53,11 @@ export default function Body({ product }) {
                 }}
               />
             )}
+          </StyledTableCell>
+          <StyledTableCell align="center">
+            <IconButton>
+              <MoreVertIcon />
+            </IconButton>
           </StyledTableCell>
         </TableRow>
       ))}
