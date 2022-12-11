@@ -7,6 +7,7 @@ import product from "../../Assets/FakeData/product.json";
 import ProductTable from "../../Components/Products/Product Table/ProductTable";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import GridViewIcon from "@mui/icons-material/GridView";
+import { Link } from "react-router-dom";
 export default function Products() {
   const drawerWidth = 280;
   const [view, setView] = useState("list");
@@ -39,14 +40,16 @@ export default function Products() {
           >
             Produts
           </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              textTransform: "none",
-            }}
-          >
-            Add Product
-          </Button>
+          <Link to="/addProduct">
+            <Button
+              variant="contained"
+              sx={{
+                textTransform: "none",
+              }}
+            >
+              Add Product
+            </Button>
+          </Link>
         </Box>
         <StateCard />
         <Box sx={{ padding: "16px" }}>{/* Grid view list view button */}</Box>
@@ -67,13 +70,13 @@ export default function Products() {
           <ButtonGroup
             variant="outlined"
             aria-label="outlined primary button group"
-            sx={{display:"flex", gap:2}}
+            sx={{ display: "flex", gap: 2 }}
           >
             <Box
               onClick={() => handleClick("list")}
               sx={{
                 height: "32px",
-                padding:"4px 8px",
+                padding: "4px 8px",
                 backgroundColor: view === "list" && "#E8EAEC",
                 borderRadius: "4px",
                 display: "flex",
@@ -81,16 +84,19 @@ export default function Products() {
                 alignContent: "center",
                 alignItems: "center",
                 cursor: "pointer",
-                gap:1
+                gap: 1,
               }}
             >
-              <FormatListBulletedIcon sx={{ color: "#254E75" }} /> <Typography sx={{fontWeight: 600,fontSize: "14px"}}>List</Typography>
+              <FormatListBulletedIcon sx={{ color: "#254E75" }} />{" "}
+              <Typography sx={{ fontWeight: 600, fontSize: "14px" }}>
+                List
+              </Typography>
             </Box>
             <Box
               onClick={() => handleClick("grid")}
               sx={{
                 height: "32px",
-                padding:"4px 8px",
+                padding: "4px 8px",
                 backgroundColor: view === "grid" && "#E8EAEC",
                 borderRadius: "4px",
                 display: "flex",
@@ -98,10 +104,13 @@ export default function Products() {
                 alignContent: "center",
                 alignItems: "center",
                 cursor: "pointer",
-                gap:1
+                gap: 1,
               }}
             >
-              <GridViewIcon sx={{ color: "#254E75"}} /> <Typography sx={{fontWeight: 600,fontSize: "14px"}}>Grid</Typography>
+              <GridViewIcon sx={{ color: "#254E75" }} />{" "}
+              <Typography sx={{ fontWeight: 600, fontSize: "14px" }}>
+                Grid
+              </Typography>
             </Box>
           </ButtonGroup>
         </Box>

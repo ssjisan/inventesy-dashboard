@@ -22,11 +22,11 @@ export default function Header() {
     <TableHead sx={{ borderRadius: "1em 0 0 1em" }}>
       <TableRow>
         <StyledTableCell>Name</StyledTableCell>
-        <StyledTableCell align="right">SKU</StyledTableCell>
-        <StyledTableCell align="right">Brand</StyledTableCell>
-        <StyledTableCell align="right">Category</StyledTableCell>
-        <StyledTableCell align="right">Price</StyledTableCell>
-        <StyledTableCell align="right">Reorder Point</StyledTableCell>
+        <StyledTableCell align="center">SKU</StyledTableCell>
+        <StyledTableCell align="center">Brand</StyledTableCell>
+        <StyledTableCell align="center">Category</StyledTableCell>
+        <StyledTableCell align="center">Price</StyledTableCell>
+        <StyledTableCell align="center">Reorder Point</StyledTableCell>
         <StyledTableCell align="center">Status</StyledTableCell>
         <StyledTableCell align="center"></StyledTableCell>
       </TableRow>

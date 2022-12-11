@@ -24,13 +24,13 @@ export default function Body({ product }) {
             }}
           >
             {" "}
-            <Avatar alt={data.title} src={data.image} /> {data.title}
+            <Avatar alt={data.title} src={data.image} sx={{backgroundColor: "#EBEFF2", height:"40px", width:"40px", borderRadius:"8px"}}/> {data.title}
           </StyledTableCell>
-          <StyledTableCell align="right">"SKU"</StyledTableCell>
-          <StyledTableCell align="right">"Brand"</StyledTableCell>
-          <StyledTableCell align="right">"Category"</StyledTableCell>
-          <StyledTableCell align="right">{data.price}</StyledTableCell>
-          <StyledTableCell align="right">"Reorder Point"</StyledTableCell>
+          <StyledTableCell align="center">"SKU"</StyledTableCell>
+          <StyledTableCell align="center">"Brand"</StyledTableCell>
+          <StyledTableCell align="center">"Category"</StyledTableCell>
+          <StyledTableCell align="center">{data.price}</StyledTableCell>
+          <StyledTableCell align="center">"Reorder Point"</StyledTableCell>
           <StyledTableCell align="center">
             {data.stock >= 10 ? (
               <Chip
