@@ -5,7 +5,8 @@ import Sidebar from "../../Layout/Sidebar/Sidebar";
 import ProductCard from "../../Components/Products/ProductCard";
 import product from "../../Assets/FakeData/product.json";
 import ProductTable from "../../Components/Products/Product Table/ProductTable";
-
+import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import GridViewIcon from "@mui/icons-material/GridView";
 export default function Products() {
   const drawerWidth = 280;
   const [view, setView] = useState("list");
@@ -66,29 +67,42 @@ export default function Products() {
           <ButtonGroup
             variant="outlined"
             aria-label="outlined primary button group"
+            sx={{display:"flex", gap:2}}
           >
-            <Button
+            <Box
               onClick={() => handleClick("list")}
               sx={{
-                backgroundColor: view === "list" && "text.200",
-                color: "text.900",
-                textTransform: "none",
-                fontWeight: view === "list" ? 700 : 500,
+                height: "32px",
+                padding:"4px 8px",
+                backgroundColor: view === "list" && "#E8EAEC",
+                borderRadius: "4px",
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+                gap:1
               }}
             >
-              List
-            </Button>
-            <Button
+              <FormatListBulletedIcon sx={{ color: "#254E75" }} /> <Typography sx={{fontWeight: 600,fontSize: "14px"}}>List</Typography>
+            </Box>
+            <Box
               onClick={() => handleClick("grid")}
               sx={{
-                backgroundColor: view === "grid" && "text.200",
-                color: "text.900",
-                textTransform: "none",
-                fontWeight: view === "grid" ? 700 : 500,
+                height: "32px",
+                padding:"4px 8px",
+                backgroundColor: view === "grid" && "#E8EAEC",
+                borderRadius: "4px",
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+                alignItems: "center",
+                cursor: "pointer",
+                gap:1
               }}
             >
-              Grid
-            </Button>
+              <GridViewIcon sx={{ color: "#254E75"}} /> <Typography sx={{fontWeight: 600,fontSize: "14px"}}>Grid</Typography>
+            </Box>
           </ButtonGroup>
         </Box>
         {view === "list" ? <ProductTable /> : <ProductCard product={product} />}

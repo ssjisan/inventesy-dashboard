@@ -13,81 +13,71 @@ export default function ProductCard({ product }) {
               borderRadius: "10px",
             }}
           >
-            <Box sx={{ position: "relative" }}>
-              <Box
-                variant="filled"
-                sx={{
-                  zIndex: 9,
-                  top: 16,
-                  right: 16,
-                  position: "absolute",
-                }}
-              >
-                {data.stock > 19 && (
-                  <Typography
-                    sx={{
-                      backgroundColor: "#00AB55",
-                      p: "4px",
-                      color: "white",
-                      borderRadius: "4px",
-                      fontSize: 12,
-                      fontWeight: 600,
-                    }}
-                  >
-                    Stock Available ({data.stock})
-                  </Typography>
-                )}
-                {data.stock < 19 && data.stock > 1 && (
-                  <Typography
-                    sx={{
-                      backgroundColor: "#FFC107",
-                      p: "4px",
-                      color: "white",
-                      borderRadius: "4px",
-                      fontSize: 12,
-                      fontWeight: 600,
-                    }}
-                  >
-                    Stock Limited ({data.stock})
-                  </Typography>
-                )}
-                {data.stock === 0 && (
-                  <Typography
-                    sx={{
-                      backgroundColor: "#FF4842",
-                      p: "4px",
-                      color: "white",
-                      borderRadius: "4px",
-                      fontSize: 12,
-                      fontWeight: 600,
-                    }}
-                  >
-                    Stock out
-                  </Typography>
-                )}
-              </Box>
-            </Box>
             <CardMedia
               component="img"
               alt="green iguana"
-              height="160"
+              height="180"
               src={data.image}
-              sx={{ objectFit: "contain", backgroundColor:"#EBEFF2"}}
+              sx={{ objectFit: "contain", backgroundColor: "#EBEFF2" }}
             />
             <CardContent>
-              <Box>
-                <Typography sx={{ fontSize: "14px", fontWeight: 600 }}>
+              <Box sx={{ mb: "16px", display:"flex", gap:2, flexDirection:"column" }}>
+                <Typography
+                  sx={{ fontSize: "14px", fontWeight: 600, height: "40px" }}
+                >
                   {data.title}
                 </Typography>
+                <Typography
+                  sx={{ fontSize: "12px", fontWeight: 500, color: "#757575" }}
+                >
+                  SKU:{data.stock}.00
+                </Typography>
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  mt: 0.5,
-                }}
-              >
+              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                <Box variant="filled">
+                  {data.stock > 19 && (
+                    <Typography
+                      sx={{
+                        backgroundColor: "#DDEDDD",
+                        p: "3px",
+                        color: "#1B5E20",
+                        borderRadius: "4px",
+                        fontSize: 14,
+                        fontWeight: 600,
+                      }}
+                    >
+                      Available
+                    </Typography>
+                  )}
+                  {data.stock < 19 && data.stock > 1 && (
+                    <Typography
+                      sx={{
+                        backgroundColor: "#FFE0B2",
+                        p: "3px",
+                        color: "#E65100",
+                        borderRadius: "4px",
+                        fontSize: 14,
+                        fontWeight: 600,
+                      }}
+                    >
+                      Limited
+                    </Typography>
+                  )}
+                  {data.stock === 0 && (
+                    <Typography
+                      sx={{
+                        backgroundColor: "#FFCDD2",
+                        p: "3px",
+                        color: "#B71C1C",
+                        borderRadius: "4px",
+                        fontSize: 14,
+                        fontWeight: 600,
+                      }}
+                    >
+                      Stock out
+                    </Typography>
+                  )}
+                </Box>
                 <Typography
                   sx={{ fontSize: "16px", color: "#212B36", fontWeight: 600 }}
                 >
