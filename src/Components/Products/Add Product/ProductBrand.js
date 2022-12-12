@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-export default function ProductBrand() {
+export default function ProductOrganization() {
   const [age, setAge] = useState("");
 
   const handleChange = (event) => {
@@ -28,6 +28,32 @@ export default function ProductBrand() {
         gap: 4,
       }}
     >
+      <TextField
+        id="outlined-basic"
+        label="Product Code"
+        variant="outlined"
+        size="small"
+      />
+      <TextField
+        id="outlined-basic"
+        label="Product SKU"
+        variant="outlined"
+        size="small"
+      />
+      <FormControl size="small">
+        <InputLabel id="demo-select-small">Unit Type</InputLabel>
+        <Select
+          labelId="demo-select-small"
+          id="demo-select-small"
+          value={age}
+          label="Unit Type"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
       <FormControl size="small">
         <InputLabel id="demo-select-small">Brand</InputLabel>
         <Select
