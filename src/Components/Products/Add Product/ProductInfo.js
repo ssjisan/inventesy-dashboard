@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  IconButton,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Box, Button, IconButton, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import ImageUploading from "react-images-uploading";
 import DeleteOutlineRoundedIcon from "@mui/icons-material/DeleteOutlineRounded";
@@ -70,13 +64,15 @@ export default function ProductInfo() {
               dragProps,
             }) => (
               // write your building UI
-              <Box sx={{ width: "100%",display: "flex", flexDirection:"column" }}>
+              <Box
+                sx={{ width: "100%", display: "flex", flexDirection: "column" }}
+              >
                 <Box
                   sx={{
                     width: "100%",
                     display: "flex",
                     justifyContent:
-                      images.length !== 0 ? "space-between" : "center", alignItems:"center"
+                      images.length !== 0 ? "space-between" : "center",
                   }}
                 >
                   <Button
@@ -91,7 +87,14 @@ export default function ProductInfo() {
                     <Button onClick={onImageRemoveAll}>Remove all</Button>
                   )}
                 </Box>
-                <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mt: 2 }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    flexWrap: "wrap",
+                    mt: images.length !== 0 && 2,
+                  }}
+                >
                   {imageList.map((image, index) => (
                     <Box sx={{ position: "relative" }} key={index}>
                       <img
@@ -114,7 +117,10 @@ export default function ProductInfo() {
                         }}
                       >
                         {" "}
-                        <IconButton onClick={() => onImageRemove(index)} sx={{width:"32px", height:"32px"}}>
+                        <IconButton
+                          onClick={() => onImageRemove(index)}
+                          sx={{ width: "32px", height: "32px" }}
+                        >
                           <DeleteOutlineRoundedIcon sx={{ color: "#B71C1C" }} />
                         </IconButton>
                       </Box>
