@@ -14,7 +14,7 @@ import SearchBar from "./SearchBar";
 const drawerWidth = 280;
 export default function Navbar({ handleDrawerToggle }) {
     // eslint-disable-next-line
-    const matches = useMediaQuery('(min-width:600px)');
+    const forBelow1100 = useMediaQuery('(min-width:1100px)');
 
     return (
         <AppBar
@@ -48,7 +48,7 @@ export default function Navbar({ handleDrawerToggle }) {
                     }}
                 >
                     <SearchBar/>
-                    <TimerFunction/>
+                    {forBelow1100 && <TimerFunction/>}
                     <AccountPopOver />
                 </Box>
             </Toolbar>

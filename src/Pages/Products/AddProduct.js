@@ -39,13 +39,13 @@ export default function AddProduct() {
             <Grid container spacing={4}>
               <Grid
                 item
-                md={8}
+                xs={12} sm={6} md={8}
                 sx={{ display: "flex", flexDirection: "column", gap: 4 }}
               >
                 <ProductInfo />
                 <ProductPrice />
               </Grid>
-              <Grid item md={4}>
+              <Grid item xs={12} sm={6} md={4}>
                 <ProductBrand />
               </Grid>
             </Grid>
