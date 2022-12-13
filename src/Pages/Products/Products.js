@@ -14,6 +14,9 @@ export default function Products() {
   const handleClick = (e) => {
     setView(e);
   };
+  const linkStyle = {
+    textDecoration: "none",
+  };
   return (
     <Box>
       <Sidebar />
@@ -40,12 +43,9 @@ export default function Products() {
           >
             Produts
           </Typography>
-          <Link to="/addProduct">
+          <Link to="/addProduct" style={linkStyle}>
             <Button
-              variant="contained"
-              sx={{
-                textTransform: "none",
-              }}
+              variant="containedPrimary"
             >
               Add Product
             </Button>

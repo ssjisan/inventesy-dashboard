@@ -51,8 +51,8 @@ export default function AddProduct() {
             </Grid>
           </Box>
           <Box sx={{mt:2, display:"flex", gap:2}}>
-          <Button variant="outlined">Cancel</Button>
-          <Button variant="contained">Save</Button>
+          <Button variant="ghostPrimary">Cancel</Button>
+          <Button variant="containedPrimary">Save</Button>
           </Box>
         </Container>
       </Box>
