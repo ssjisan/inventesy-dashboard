@@ -6,7 +6,7 @@ import {
   OutlinedInput,
   TextField,
 } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 
 export default function ProductPrice() {
   return (

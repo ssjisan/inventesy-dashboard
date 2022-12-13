@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Grid,
   IconButton,
   TextField,
   Typography,
@@ -71,13 +70,13 @@ export default function ProductInfo() {
               dragProps,
             }) => (
               // write your building UI
-              <Box sx={{ width: "100%" }}>
+              <Box sx={{ width: "100%",display: "flex", flexDirection:"column" }}>
                 <Box
                   sx={{
                     width: "100%",
                     display: "flex",
                     justifyContent:
-                      images.length !== 0 ? "space-between" : "center",
+                      images.length !== 0 ? "space-between" : "center", alignItems:"center"
                   }}
                 >
                   <Button
@@ -94,12 +93,13 @@ export default function ProductInfo() {
                 </Box>
                 <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap", mt: 2 }}>
                   {imageList.map((image, index) => (
-                    <Box sx={{ position: "relative" }}>
+                    <Box sx={{ position: "relative" }} key={index}>
                       <img
                         src={image["data_url"]}
+                        alt="url"
                         style={{
-                          width: "180px",
-                          height: "180px",
+                          width: "140px",
+                          height: "105px",
                           objectFit: "cover",
                         }}
                       />
@@ -107,14 +107,14 @@ export default function ProductInfo() {
                         sx={{
                           position: "absolute",
                           zIndex: 9,
-                          top: 128,
+                          top: 68,
                           right: 8,
                           backgroundColor: "#F1D2D2",
                           borderRadius: "100%",
                         }}
                       >
                         {" "}
-                        <IconButton onClick={() => onImageRemove(index)}>
+                        <IconButton onClick={() => onImageRemove(index)} sx={{width:"32px", height:"32px"}}>
                           <DeleteOutlineRoundedIcon sx={{ color: "#B71C1C" }} />
                         </IconButton>
                       </Box>
