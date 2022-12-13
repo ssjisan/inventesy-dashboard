@@ -3,8 +3,10 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
+  OutlinedInput,
   Select,
   TextField,
+  InputAdornment,
 } from "@mui/material";
 import React, { useState } from "react";
 
@@ -28,12 +30,15 @@ export default function ProductOrganization() {
         gap: 4,
       }}
     >
-      <TextField
-        id="outlined-basic"
-        label="Product Code"
-        variant="outlined"
-        size="small"
-      />
+      <FormControl fullWidth sx={{ mb: 1 }} size="small">
+        <InputLabel htmlFor="outlined-adornment-amount">Product Code</InputLabel>
+        <OutlinedInput
+          id="outlined-adornment-amount"
+          value=""
+          startAdornment={<InputAdornment position="start">PN-</InputAdornment>}
+          label="Product Code"
+        />
+      </FormControl>
       <TextField
         id="outlined-basic"
         label="Product SKU"
