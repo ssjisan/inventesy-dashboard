@@ -76,7 +76,13 @@ export default function ProductInfo() {
                   }}
                 >
                   <Button
-                    style={isDragging ? { color: "red" } : undefined}
+                    sx={{
+                      padding: "4px 8px",
+                      backgroundColor: "#DCE1E5",
+                      color: "#0D3B66",
+                      textTransform: "none",
+                      fontWeight: 700,
+                    }}
                     onClick={onImageUpload}
                     {...dragProps}
                   >
@@ -84,7 +90,18 @@ export default function ProductInfo() {
                   </Button>
                   &nbsp;
                   {images.length !== 0 && (
-                    <Button onClick={onImageRemoveAll}>Remove all</Button>
+                    <Button
+                      onClick={onImageRemoveAll}
+                      sx={{
+                        padding: "4px 8px",
+                        backgroundColor: "#FFCDD2",
+                        color: "#B71C1C",
+                        textTransform: "none",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Remove all
+                    </Button>
                   )}
                 </Box>
                 <Box
