@@ -4,6 +4,7 @@ import Salesman from "../../Assets/Icons/Salesman";
 import DailySales from "../../Assets/Icons/DailySales";
 import Reports from "../../Assets/Icons/Reports";
 import Dashboard from "../../Assets/Icons/Dashboard";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const navConfig = [
   {
@@ -17,6 +18,18 @@ const navConfig = [
     title: "Product",
     link: "/product",
     icon: <Items />,
+    subNav: [
+      {
+        title: "Add Product",
+        link: "/product/addProduct",
+        icon: <FiberManualRecordIcon sx={{fontSize:"small"}}/>,
+      },
+      {
+        title: "All Product",
+        link: "/product/allProduct",
+        icon: <FiberManualRecordIcon sx={{fontSize:"small"}}/>,
+      },
+    ],
   },
   {
     id: 3,
@@ -41,7 +54,7 @@ const navConfig = [
     title: "Report",
     link: "/report",
     icon: <Reports />,
-  },
+  }
 ];
 const settings = [{ id: 1, title: "Name" }];
 

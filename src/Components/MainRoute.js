@@ -17,7 +17,7 @@ export default function MainRoute() {
       <Route path="/zone" element={<Zone />} />
       <Route path="/daily-sales" element={<DailySales />} />
       <Route path="/report" element={<Reports />} />
-      <Route path="/addProduct" element={<AddProduct />} />
+      <Route path="/product/addProduct" element={<AddProduct />} />
     </Routes>
   );
 }

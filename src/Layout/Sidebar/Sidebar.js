@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -8,7 +8,14 @@ import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Navbar from "../Navbar/Navbar";
 import { navConfig } from "../Navbar/NavConfig";
-import { Button, Typography } from "@mui/material";
+import {
+  Button,
+  Collapse,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 const drawerWidth = 280;
 
 function Sidebar(props) {
@@ -24,30 +31,62 @@ function Sidebar(props) {
     fontWeight: 700,
     borderRadius: "10px",
   };
+  const DropdownLink = {
+    height: "48px",
+    paddingLeft: "3rem",
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    color: "#637381",
+    fontSize: "16px",
+  };
   const { pathname } = useLocation();
-
+  const [open, setOpen] = useState([]);
+  useEffect(() => {
+    const index = navConfig.findIndex((item) => {
+      if (!item.subNav) {
+        return item.link === pathname;
+      } else {
+        return item.subNav.find((subitem) => subitem.link === pathname);
+      }
+    });
+    if (index !== -1) {
+      setOpen((newOpen) => {
+        newOpen[index] = true;
+        return [...newOpen];
+      });
+    }
+  }, [pathname]);
+  const handleClick = (index) => {
+    setOpen((prev) => {
+      const newOpen = [...prev];
+      newOpen[index] = !newOpen[index];
+      return newOpen;
+    });
+  };
   const drawer = (
     <div>
       <Box sx={{ pl: 2.5, pt: 3, pb: 8, display: "inline-flex" }}>
         <img src="Logo.svg" alt="React Logo" />
       </Box>
       <List>
-        {navConfig.map((item) => (
+        {navConfig.map((item, index) => (
           <>
             <Link to={item.link} style={linkStyle} key={item.id}>
-              <Box
+              <ListItem
                 key={item.id}
+                disablePadding
                 sx={{
                   ml: 1.5,
                   background:
                     pathname === item.link && "rgba(245, 48, 98, 0.08)",
-
                   borderRadius: "10px",
                   width: "245px",
                   height: "44px",
                 }}
+                onClick={() => handleClick(index)}
               >
-                <Button
+                <ListItemButton
                   sx={{
                     display: "flex",
                     justifyContent: "flex-start",
@@ -60,9 +99,7 @@ function Sidebar(props) {
                 >
                   <ListItemIcon
                     sx={{
-                      color: pathname === item.link ? "#F53062" : "#757575",
-                      marginRight: "16px",
-                      minWidth: "24px",
+                      color: pathname === item.link ? "#2065d1" : "#637381",
                     }}
                   >
                     {item.icon}
@@ -73,12 +110,43 @@ function Sidebar(props) {
                       fontSize: "14px",
                     }}
                   >
-                    {" "}
-                    {item.title}{" "}
+                    {item.title}
                   </Typography>
-                </Button>
-              </Box>
+                </ListItemButton>
+              </ListItem>
             </Link>
+            {item.subNav
+              ? item.subNav.map((subItem) => (
+                  <Collapse
+                    in={open[index]}
+                    sx={{ display: open[index] ? "block" : "none" }}
+                    timeout="auto"
+                    unmountOnExit
+                  >
+                    <Link to={subItem.link} key={index} style={DropdownLink}>
+                      <ListItem>
+                        <ListItemIcon
+                          sx={{
+                            minWidth: "32px",
+                            color:
+                              pathname === subItem.link ? "#2065d1" : "#637381",
+                          }}
+                        >
+                          {subItem.icon}
+                        </ListItemIcon>
+                        <Typography
+                          sx={{
+                            color:
+                              pathname === subItem.link ? "#2065d1" : "#637381",
+                          }}
+                        >
+                          {subItem.title}
+                        </Typography>
+                      </ListItem>
+                    </Link>
+                  </Collapse>
+                ))
+              : null}
           </>
         ))}
       </List>

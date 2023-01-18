@@ -43,7 +43,7 @@ export default function Products() {
           >
             Produts
           </Typography>
-          <Link to="/addProduct" style={linkStyle}>
+          <Link to="product/addProduct" style={linkStyle}>
             <Button
               variant="containedPrimary"
             >
