@@ -9,11 +9,9 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import Navbar from "../Navbar/Navbar";
 import { navConfig } from "../Navbar/NavConfig";
 import {
-  Button,
   Collapse,
   ListItem,
   ListItemButton,
-  ListItemText,
   Typography,
 } from "@mui/material";
 const drawerWidth = 280;
