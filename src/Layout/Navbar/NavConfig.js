@@ -16,18 +16,20 @@ const navConfig = [
   {
     id: 2,
     title: "Product",
-    link: "/product",
+    link: "",
     icon: <Items />,
     subNav: [
       {
+        id: 1,
         title: "Add Product",
-        link: "/product/addProduct",
-        icon: <FiberManualRecordIcon sx={{fontSize:"small"}}/>,
+        link: "/product/add_product",
+        icon: <FiberManualRecordIcon sx={{ fontSize: "small" }} />,
       },
       {
+        id: 1,
         title: "All Product",
-        link: "/product/allProduct",
-        icon: <FiberManualRecordIcon sx={{fontSize:"small"}}/>,
+        link: "/product/all_product",
+        icon: <FiberManualRecordIcon sx={{ fontSize: "small" }} />,
       },
     ],
   },
@@ -54,7 +56,7 @@ const navConfig = [
     title: "Report",
     link: "/report",
     icon: <Reports />,
-  }
+  },
 ];
 const settings = [{ id: 1, title: "Name" }];
 
