@@ -22,13 +22,13 @@ const navConfig = [
       {
         id: 1,
         title: "Add Product",
-        link: "/product/add_product",
+        link: "/add_product",
         icon: <FiberManualRecordIcon sx={{ fontSize: "small" }} />,
       },
       {
         id: 1,
         title: "All Product",
-        link: "/product/all_product",
+        link: "/all_product",
         icon: <FiberManualRecordIcon sx={{ fontSize: "small" }} />,
       },
     ],

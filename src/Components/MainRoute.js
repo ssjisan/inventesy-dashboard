@@ -12,12 +12,12 @@ export default function MainRoute() {
   return (
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/product/all_product" element={<Products />} />
+      <Route path="/all_product" element={<Products />} />
       <Route path="/salesman" element={<Salesman />} />
       <Route path="/zone" element={<Zone />} />
       <Route path="/daily-sales" element={<DailySales />} />
       <Route path="/report" element={<Reports />} />
-      <Route path="/product/add_product" element={<AddProduct />} />
+      <Route path="/add_product" element={<AddProduct />} />
     </Routes>
   );
 }
