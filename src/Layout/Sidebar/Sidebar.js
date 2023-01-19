@@ -8,12 +8,7 @@ import List from "@mui/material/List";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Navbar from "../Navbar/Navbar";
 import { navConfig } from "../Navbar/NavConfig";
-import {
-  Collapse,
-  ListItem,
-  ListItemButton,
-  Typography,
-} from "@mui/material";
+import { Collapse, ListItem, ListItemButton, Typography } from "@mui/material";
 const drawerWidth = 280;
 
 function Sidebar(props) {
@@ -127,7 +122,7 @@ function Sidebar(props) {
                           sx={{
                             minWidth: "32px",
                             color:
-                              pathname === subItem.link ? "#2065d1" : "#637381",
+                              pathname === subItem.link ? "#F53062" : "#757575",
                           }}
                         >
                           {subItem.icon}
@@ -135,7 +130,9 @@ function Sidebar(props) {
                         <Typography
                           sx={{
                             color:
-                              pathname === subItem.link ? "#2065d1" : "#637381",
+                              pathname === subItem.link ? "#F53062" : "#757575",
+                            fontWeight: pathname === subItem.link ? 600 : 400,
+                            fontSize: "14px",
                           }}
                         >
                           {subItem.title}
