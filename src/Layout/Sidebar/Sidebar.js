@@ -18,6 +18,7 @@ function Sidebar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
   const linkStyle = {
     margin: "1rem",
     textDecoration: "none",
@@ -72,7 +73,7 @@ function Sidebar(props) {
                 sx={{
                   ml: 1.5,
                   background:
-                    pathname === item.link && "rgba(245, 48, 98, 0.08)",
+                  (item?.subNav?.find(subNav => pathname === subNav.link) && pathname !== item.link) && "rgba(245, 48, 98, 0.08)",
                   borderRadius: "10px",
                   width: "245px",
                   height: "44px",
@@ -87,19 +88,19 @@ function Sidebar(props) {
                     width: "100%",
                     padding: "8px 16px 8px 16px",
                     height: "44px",
-                    color: pathname === item.link ? "#F53062" : "#757575",
+                    color: (item?.subNav?.find(subNav => pathname === subNav.link) && pathname !== item.link) ? "#F53062" : "#757575",
                   }}
                 >
                   <ListItemIcon
                     sx={{
-                      color: pathname === item.link ? "#2065d1" : "#637381",
+                      color: (item?.subNav?.find(subNav => pathname === subNav.link) && pathname !== item.link) ? "#2065d1" : "#637381",
                     }}
                   >
                     {item.icon}
                   </ListItemIcon>
                   <Typography
                     sx={{
-                      fontWeight: pathname === item.link ? 600 : 400,
+                      fontWeight: (item?.subNav?.find(subNav => pathname === subNav.link) && pathname !== item.link) ? 600 : 400,
                       fontSize: "14px",
                     }}
                   >
@@ -109,7 +110,7 @@ function Sidebar(props) {
               </ListItem>
             </Link>
             {item.subNav
-              ? item.subNav.map((subItem) => (
+              ? item.subNav.map((subItem,subIndex) => (
                   <Collapse
                     in={open[index]}
                     sx={{ display: open[index] ? "block" : "none" }}
